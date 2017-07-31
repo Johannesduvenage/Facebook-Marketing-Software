@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond $1 !^(index\.php|captcha\.php|server\.php|images|css|image|font-awesome|employee_images|js|js11|fonts|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?$1 [L]
